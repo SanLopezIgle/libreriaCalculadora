@@ -3,12 +3,13 @@ package com.sandra.calculadora;
 import java.sql.SQLOutput;
 
 public class Calculadora {
+    /**
+     * Constantes literales para usar en el switch como opciones
+     */
     public static final int SUMA = 1;
     public static final int RESTA = 2;
     public static final int MULTIPLICACION = 3;
     public static final int DIVISION = 4;
-    //public static final int RAIZ_CUADRADA = 5;
-    //public static final int RAIZ_CUBICA = 6;
     public static final int RAIZ = 5;
 
     public static final int SALIR = 8;
@@ -16,8 +17,8 @@ public class Calculadora {
 
     /**
      * Programa para realizar operaciones basicas
-     * @param numero1 para realizar la operacion deseada
-     * @param numero2 para realizr la operacion deseada
+     * @param numero1 para realizar la operacion deseada (radicando en el caso de RAIZ)
+     * @param numero2 para realizr la operacion deseada (indice en el caso de RAIZ)
      * @param operacion (SUMA, RESTA, MULTIPLICACION, DIVISION)PROGR
      * @return resultado de la operacion
      */
