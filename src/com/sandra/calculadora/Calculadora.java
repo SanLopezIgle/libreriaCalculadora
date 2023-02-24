@@ -1,12 +1,17 @@
 package com.sandra.calculadora;
 
+import java.sql.SQLOutput;
+
 public class Calculadora {
     public static final int SUMA = 1;
     public static final int RESTA = 2;
     public static final int MULTIPLICACION = 3;
     public static final int DIVISION = 4;
+    //public static final int RAIZ_CUADRADA = 5;
+    //public static final int RAIZ_CUBICA = 6;
+    public static final int RAIZ = 5;
 
-    public static final int SALIR = 5;
+    public static final int SALIR = 8;
     public static Float resultado = null;
 
     /**
@@ -43,6 +48,13 @@ public class Calculadora {
             case DIVISION:
                 try {
                     resultado = numero1 / numero2;
+                }catch (Exception e){
+                    System.out.println("Error");
+                }
+                break;
+            case RAIZ:
+                try {
+                    resultado = (float) Math.pow(numero1, (double) (1/numero2));
                 }catch (Exception e){
                     System.out.println("Error");
                 }

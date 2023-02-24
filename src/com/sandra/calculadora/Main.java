@@ -4,10 +4,12 @@ public class Main {
         public static void main(String[] args) {
 
             Float resultado;
-            int opcion = EntradaSalida.entradaEntero("1. Suma\n2. Resta\n3. Hacer multiplicación\n4. División\n5. Salir");
-            float numero1 = EntradaSalida.entradaFloat("Teclee o primer número da operación");
-            float numero2 = EntradaSalida.entradaFloat("Teclee o segundo número da opecion");
-            if (opcion > 0 && opcion < 5) {
+            float numero1 = EntradaSalida.entradaFloat("Dame el primer número de la operación que quieras hacer\n" +
+                                                        "(en caso de la raiz el radicando):");
+            float numero2 = EntradaSalida.entradaFloat("Dame el segundo número\n" +
+                                                        "(en caso de la raiz el indice:");
+            int opcion = EntradaSalida.entradaEntero("¿Qué operación quieres hacer?\n1. Suma\n2. Resta\n3. Multiplicación\n4. División\n5. Raiz\n6. Salir");
+            if (opcion > 0 && opcion < 6) {
                 resultado = Calculadora.calcular(numero1, numero2, opcion);
                 if (resultado == null) {
                     EntradaSalida.salida("Error", EntradaSalida.SALIDA_CONSOLA);
@@ -16,7 +18,7 @@ public class Main {
                     EntradaSalida.salida("Error", EntradaSalida.SALIDA_CONSOLA);
                 }
                 else {
-                    EntradaSalida.salida(("O resultado da operación é " + resultado), EntradaSalida.SALIDA_CONSOLA);
+                    EntradaSalida.salida(("El resultado de la operación es " + resultado), EntradaSalida.SALIDA_CONSOLA);
                 }
             }
         }
